@@ -119,6 +119,8 @@ global.Chat = require('./chat');
 
 global.Rooms = require('./rooms');
 
+global.Alliance = {};
+
 global.Tells = require('./tells.js');
 
 global.Db = require('origindb')('config/db');
