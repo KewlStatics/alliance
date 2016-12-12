@@ -67,18 +67,16 @@ function logMoney(message) {
  * @return {String} display
  */
 function getShopDisplay(shop) {
-	let display = "<table border='1' cellspacing='0' cellpadding='5' width='100%'>" +
-					"<tbody><tr><th>Command</th><th>Description</th><th>Cost</th></tr>";
+	let display = '<center><b><font color="red" size="4">Read the description of the item you want to buy if you haven\'t already.</font></b></center></center><div style="box-shadow: 4px 4px 4px #000 inset, -4px -4px 4px #000 inset, 5px 3px 8px rgba(0, 0, 0, 0.6); max-height: 310px; overflow-y: scroll;"><table style="width: 100%; border-collapse: collapse;"><table style="width: 100%; border-collapse: collapse;"><tr><th colspan="3" class="table-header" style="background: -moz-linear-gradient(right, #09263A, #03121C); background: -webkit-linear-gradient(left, #09263A, #03121C); background: -o-linear-gradient(right, #09263A, #03121C); background: linear-gradient(right, #09263A, #03121C); padding: 8px 20px 16px 8px; box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8) inset; text-shadow: 1px 1px #0A2D43, 2px 2px #0A2D43, 3px 3px #0A2D43, 4px 4px #0A2D43, 5px 5px #0A2D43, 6px 6px #0A2D43, 7px 7px #0A2D43, 8px 8px #0A2D43, 9px 9px #0A2D43, 10px 10px #0A2D43;"><h2>Alliance Shop</h2></th></tr>' +
+		'<tr><th class="table-header" style="background: -moz-linear-gradient(#173C54, #061C2A); background: -webkit-linear-gradient(#173C54, #061C2A); background: -o-linear-gradient(#173C54, #061C2A); background: linear-gradient(#173C54, #061C2A); box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8) inset;">Item</th><th class="table-header" style="background: -moz-linear-gradient(#173C54, #061C2A); background: -webkit-linear-gradient(#173C54, #061C2A); background: -o-linear-gradient(#173C54, #061C2A); background: linear-gradient(#173C54, #061C2A); box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8) inset;">Description</th><th class="table-header" style="background: -moz-linear-gradient(#173C54, #061C2A); background: -webkit-linear-gradient(#173C54, #061C2A); background: -o-linear-gradient(#173C54, #061C2A); background: linear-gradient(#173C54, #061C2A); box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8) inset;">Cost</th></tr>';
 	let start = 0;
 	while (start < shop.length) {
-		display += "<tr>" +
-						"<td align='center'><button name='send' value='/buy " + shop[start][0] + "'><b>" + shop[start][0] + "</b></button>" + "</td>" +
-						"<td align='center'>" + shop[start][1] + "</td>" +
-						"<td align='center'>" + shop[start][2] + "</td>" +
-					"</tr>";
+		display += '<tr><td class="table-option"><button class="table-btn" name="send" value="/buy ' + shop[start][0] + '">' + shop[start][0] + '</button></td>' +
+			'<td class="table-option">' + shop[start][1] + '</td>' +
+			'<td class="table-option">' + shop[start][2] + '</td></tr>';
 		start++;
 	}
-	display += "</tbody></table><center>To buy an item from the shop, use /buy <em>command</em>.</center>";
+	display += '</table></div>';
 	return display;
 }
 
