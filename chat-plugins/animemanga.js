@@ -1,4 +1,4 @@
-use strict';
+'use strict';
 /* credits to Wisp for the code. */
 
 const nani = require('nani').init("niisama1-uvake", "llbgsBx3inTdyGizCPMgExBVmQ5fU");
